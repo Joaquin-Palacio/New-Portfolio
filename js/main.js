@@ -138,12 +138,29 @@ const sr = ScrollReveal({
   origin: 'top',
   distance: '60px',
   duration: 2500,
-  delay: 400, 
-  reset: true  
-})
+  delay: 400,
+  reset: true,
+});
 
-sr.reveal(`.home__perfil, .about__image, .contact__mail`, {origin: 'right'})
-sr.reveal(`.home__name, .home__info,
+sr.reveal(`.home__perfil, .about__image, .contact__mail`, { origin: 'right' });
+sr.reveal(
+  `.home__name, .home__info,
            .about__container section__title-1, .about__info
-           .contact__social, .contact__data`, {origin: 'left'})
-sr.reveal(`.services__card, .projects__card`, {interval: 100})
+           .contact__social, .contact__data`,
+  { origin: 'left' }
+);
+sr.reveal(`.services__card, .projects__card`, { interval: 100 });
+
+/* ========== DOWNLOAD CV ========== */
+
+document.getElementById('download-cv').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const cvUrl = '../assets/CV-Joaquín-Palacio.pdf';
+
+  const link = document.createElement('a');
+  link.href = cvUrl;
+  link.download = 'CV-Joaquín-Palacio.pdf';
+
+  link.click();
+});
