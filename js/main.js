@@ -152,7 +152,6 @@ sr.reveal(
 sr.reveal(`.services__card, .projects__card`, { interval: 100 });
 
 /* ========== DOWNLOAD CV ========== */
-
 document.getElementById('download-cv').addEventListener('click', function (e) {
   e.preventDefault();
 
