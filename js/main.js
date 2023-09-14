@@ -94,10 +94,12 @@ const scrollActive = () => {
       sectionClass = document.querySelector(
         '.nav__menu a[href*=' + sectionId + ']'
       );
-    if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-      sectionClass.classList.add('active-link');
-    } else {
-      sectionClass.classList.remove('active-link');
+    if (sectionClass) {
+      if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+        sectionClass.classList.add('active-link');
+      } else {
+        sectionClass.classList.remove('active-link');
+      }
     }
   });
 };
